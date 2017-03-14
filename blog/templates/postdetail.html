@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+        <div class="row">
+            <hr>
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="#">
+                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+                </a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+                <h3>{{ post.title }}</h3>
+                <div class="row">
+                   <div class="col-xs-9">
+                      {% if post.image %}
+                          <img src="/media/{{ post.image}}">
+                      {% endif %}
+                      <p>{{ post.content|linebreaks }}</p>
+                      <p><button class="btn btn-default"
+                onclick="location.href='/blog'">Back to Blog</button> </p>
+                   <button class="btn btn-default" onclick="location.href='edit'">Edit</button>
+                       {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{#{% for blog in blogs %}#}
+    {# Each "contact" is a Contact model object. #}
+{#    {{ blog.content }}<br />#}
+{#    ...#}
+{#{% endfor %}#}
+{##}
+{##}
+{##}
+{#<div class="pagination">#}
+{#    <span class="step-links">#}
+{#        {% if blogs.has_previous %}#}
+{#            <a href="?page={{ blogs.previous_page_number }}">previous</a>#}
+{#        {% endif %}#}
+{##}
+{#        <span class="current">#}
+{#            Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}.#}
+{#        </span>#}
+{##}
+{#        {% if blogs.has_next %}#}
+{#            <a href="?page={{ blogs.next_page_number }}">next</a>#}
+{#        {% endif %}#}
+{#    </span>#}
+{#</div>#}
+
+
+
+
+

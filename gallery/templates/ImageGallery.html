@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<head xmlns="http://www.w3.org/1999/html">
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+
+
+
+</head>
+
+<body>
+
+
+
+{% block content %}
+
+
+
+    <h1 style="text-align: center; color: red;">Image Gallery</h1><br>
+    <div>
+    <button class="btn btn-success btn-lg" style="display: block; margin: 0 auto;" onclick="location.href='{% url 'new_image' %}'">New Image Upload</button>
+    </div>
+    <br><br>
+
+{#    {% for image in image %}#}
+{#        <div>#}
+{#            <div>#}
+{#                {{ image.published_date }}#}
+{#            </div>#}
+{#            <h1><a href="">{{ image.title }}</a></h1>#}
+{#             {% if image.image %}#}
+{#          <img src="/media/{{ image.image}}">#}
+{#      {% endif %}#}
+{#            <p>{{ image.content|linebreaks }}</p>#}
+{#        </div>#}
+{#    {% endfor %}#}
+{#{% endblock %}#}
+
+
+
+<div class="row">
+    {% for image in image  %}
+
+    <div class="col-md-4">
+        <div>
+            {{ image.published_date }}
+        </div>
+
+        <div>
+            {{ image.title }}
+        </div>
+
+        <div>
+            <img class="imgs" height="500px" width="650px" src="/media/{{ image.image }}"/>>
+            <br><br>
+            <input id="size" type="button" value="View Full Size">
+        </div>
+
+    <br><br>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+{#    <div class="pag-position">#}
+{##}
+{#    <div class="pagination" style="color: white; background-color: white;">#}
+{#        <ul>#}
+{#        {% if image.has_previous %}#}
+{#            <li><a href="?page={{ image.previous_page_number }}">Previous</a></li>#}
+{#            {% endif %}#}
+{#        {% for pg in image.paginator.page_range %}#}
+{#            {% if image.number == pg %}#}
+{#                <li class="active"><a href="?page={{ pg }}">{{ pg }}</a> </li>#}
+{#        {% else %}#}
+{#                <li><a href="?page={{ pg }}">{{ pg }}</a> </li>#}
+{#        {% endif %}#}
+{#        {% endfor %}#}
+{#        {% if image.has_next %}#}
+{#        <li><a href="?page={{ image.next_page_number }}">Next</a> </li>#}
+{#        {% endif %}#}
+{#        </ul>#}
+{#    </div>#}
+{##}
+{##}
+{#    </div>#}
+
+      <br><br>
+
+    <div class="row">
+    <div class="col-md-12" style="background-color: blue;">
+
+<ul class="product-nav" style="text-align: center;">
+
+    {% if image.has_next %}
+<li style="list-style: none; display: inline-block">
+        <a style="color: white !important;font-size: 25px; display: inline-block !important; padding: 5px;" href="?page={{ image.next_page_number }}">Next</a></li>
+    {% endif %}
+
+    {% if image.has_previous %}
+     <li style="list-style: none; display: inline-block">
+       <a style="color: white !important;font-size: 25px; display: inline-block !important; padding: 5px;" href="?page={{ image.previous_page_number }}">Previous</a></li>
+    {% endif %}
+
+ </ul>
+
+</div>
+    </div>
+
+<br><br>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+</body>
+</html>
+

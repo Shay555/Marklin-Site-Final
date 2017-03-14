@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<body>
+<!--header-->
+{#<header>#}
+{#    <div class="box">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-8 col-md-8">#}
+{#                    <p class="title1">Free phone: <strong>800-2345-6789</strong></p>#}
+{#                    <p class="title2">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>#}
+{#                </div>#}
+{#                <div class="col-lg-4 col-md-4">#}
+{#                    <a href="#" class="btn-default btn1">Register</a>#}
+{#                    <a href="#" class="btn-default btn1">Sign In</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="container">#}
+{#        <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img src="img/logo.png" alt=""></a></h1>#}
+{#        <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">#}
+{#            <ul class="nav sf-menu clearfix">#}
+{#                <li class="active"><a href="index.html">Home</a></li>#}
+{#                <li class="sub-menu"><a href="index-1.html">About</a><span class="fa fa-angle-down"></span>#}
+{#                    <ul class="submenu">#}
+{#        				<li><a href="#">Lorem ipsum</a></li>#}
+{#        				<li><a href="#">Dolor sit amet</a><span class="fa fa-angle-right"></span>#}
+{#                            <ul class="submenu">#}
+{#                                <li><a href="#">Dolore ipsu</a></li>#}
+{#                                <li><a href="#">Consecte</a></li>#}
+{#                                <li><a href="#">Elit Conseq</a></li>#}
+{#                            </ul> #}
+{#                        </li>#}
+{#        				<li><a href="#">Conse ctetur</a></li>#}
+{#                        <li><a href="#">Adipisicing</a></li>#}
+{#                        <li><a href="#">Elit sed do</a></li>#}
+{#                        <li><a href="#">Eiusmod tempor</a></li>#}
+{#                        <li><a href="#">Incididunt ut labore</a></li>#}
+{#                        <li><a href="#">Et dolore magna</a></li>#}
+{#        			</ul>#}
+{#                </li>#}
+{#                <li><a href="index-2.html">Sell</a></li>#}
+{#                <li><a href="index-3.html">Buy</a></li>#}
+{#                <li><a href="index-4.html">Contact us</a></li>#}
+{#            </ul>#}
+{#        </nav>#}
+{#    </div>#}
+{#</header>#}
+<!--content-->
+<div class="content"> 
+    <div class="thumb-box1 home-banner">
+        <div class="container home-banner2">
+            <div class="row">
+{#                <div class="col-lg-7 col-md-7 col-sm-12">#}
+                <div class="col-md-12">
+                    <p>The best place<strong>to buy Marklin Merchandise</strong></p>
+                    <a href="{% url 'register' %}" class="btn-default btn2">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thumb-box2">
+        <div class="container">
+            <h2><strong>Finished</strong> Auctions</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 maxheight">
+                    <div class="thumb-pad1">
+                        <div class="badge">Final price<strong>220</strong></div>
+                        <div class="thumbnail">
+                            <figure><img src="../static/marklin-img/index-control.jpg" height="250px" width="250px" alt=""></figure>
+                            <div class="caption">
+                                <p>Marklin controller</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 maxheight">
+                    <div class="thumb-pad1">
+                        <div class="badge">Final price<strong>56</strong></div>
+                        <div class="thumbnail">
+                            <figure><img src="../static/marklin-img/index-flatbed.jpg" height="250px" width="250px" alt=""></figure>
+                            <div class="caption">
+                                <p>Marklin flatbed wagon</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 maxheight">
+                    <div class="thumb-pad1">
+                        <div class="badge">Final price<strong>143</strong></div>
+                        <div class="thumbnail">
+                            <figure><img src="../static/marklin-img/index-shed.jpg" height="250px" width="250px" alt=""></figure>
+                            <div class="caption">
+                                <p>Engine shed</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 maxheight">
+                    <div class="thumb-pad1">
+                        <div class="badge">Final price<strong>86</strong></div>
+                        <div class="thumbnail">
+                            <figure><img src="../static/marklin-img/index-track.jpg" height="250px" width="250px" alt=""></figure>
+                            <div class="caption">
+                                <p>Marklin c track (x6)</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{#    <div class="thumb-box3">#}
+{#        <div class="container">#}
+{#            <h2><strong>Current</strong> Auctions</h2>#}
+{#            <div class="row">#}
+{#                <div class="col-lg-3 col-md-6 col-sm-6 maxheight2">#}
+{#                    <div class="thumb-pad2">#}
+{#                        <div class="thumbnail">#}
+{#                            <span>23 : 15 : 25</span>#}
+{#                            <figure><img src="img/page1_pic5.jpg" alt=""></figure>#}
+{#                            <div class="caption">#}
+{#                                <p class="price">Price: $258</p>#}
+{#                                <strong>386</strong>#}
+{#                                <a href="#">Excepteur sint occaecat cupidatat non</a><div class="clearfix"></div>#}
+{#                                <a href="#" class="btn-default btn3">Submit a bid <em><i>X</i> 3</em></a>#}
+{#                            </div>  #}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-6 col-sm-6 maxheight2">#}
+{#                    <div class="thumb-pad2">#}
+{#                        <div class="thumbnail">#}
+{#                            <span>23 : 15 : 25</span>#}
+{#                            <figure><img src="img/page1_pic6.jpg" alt=""></figure>#}
+{#                            <div class="caption">#}
+{#                                <p class="price">Price: $258</p>#}
+{#                                <strong>11</strong>#}
+{#                                <a href="#">Excepteur sint occaecat cupidatat non</a><div class="clearfix"></div>#}
+{#                                <a href="#" class="btn-default btn3">Submit a bid <em><i>X</i> 3</em></a>#}
+{#                            </div>  #}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-6 col-sm-6 maxheight2">#}
+{#                    <div class="thumb-pad2">#}
+{#                        <div class="thumbnail">#}
+{#                            <span>23 : 15 : 25</span>#}
+{#                            <figure><img src="img/page1_pic7.jpg" alt=""></figure>#}
+{#                            <div class="caption">#}
+{#                                <p class="price">Price: $258</p>#}
+{#                                <strong>86</strong>#}
+{#                                <a href="#">Excepteur sint occaecat cupidatat non</a><div class="clearfix"></div>#}
+{#                                <a href="#" class="btn-default btn3">Submit a bid <em><i>X</i> 3</em></a>#}
+{#                            </div>  #}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-6 col-sm-6 maxheight2">#}
+{#                    <div class="thumb-pad2">#}
+{#                        <div class="thumbnail">#}
+{#                            <span>23 : 15 : 25</span>#}
+{#                            <figure><img src="img/page1_pic8.jpg" alt=""></figure>#}
+{#                            <div class="caption">#}
+{#                                <p class="price">Price: $258</p>#}
+{#                                <strong>27</strong>#}
+{#                                <a href="#">Excepteur sint occaecat cupidatat non</a><div class="clearfix"></div>#}
+{#                                <a href="#" class="btn-default btn3">Submit a bid <em><i>X</i> 3</em></a>#}
+{#                            </div>  #}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <a href="#" class="btn-default btn4">See all auctions</a>#}
+{#        </div>#}
+    </div>
+    <div class="thumb-box4">
+        <div class="container">
+            <h2><strong>How it works</strong></h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 maxheight3">
+                    <div class="box">
+                        <div class="badge fa fa-user"></div>
+                        <strong>Register</strong>
+                        <p>If you areant already a member, register <a href="#">here</a>. If your alreadt a member, just sign in and proceed to the buy page. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 maxheight3">
+                    <div class="box">
+                        <div class="badge fa fa-money"></div>
+                        <strong>Buy</strong>
+                        <p>When you have a browse the <a href="#">sell</a> page, if you see anything you would like to purchase, simply just hit the pay with paypal button to complete the purchase. </p>
+                    </div>
+                </div>
+{#                <div class="col-lg-3 col-md-6 col-sm-6 maxheight3">#}
+{#                    <div class="box">#}
+{#                        <div class="badge fa fa-gavel"></div>#}
+{#                        <strong>Submit a Bid</strong>#}
+{#                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="col-lg-4 col-md-6 col-sm-6 maxheight3">
+                    <div class="box">
+                        <div class="badge fa fa-trophy"></div>
+                        <strong>Win</strong>
+                        <p>Congradulations, the item is yours and you can now add it to your marklin layout</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{#    <div class="stellar-section">#}
+{#        <div class="thumb-box5" data-stellar-background-ratio="0.1">#}
+{#            <div class="container">#}
+{#                <h2><strong>Join</strong> the Winners</h2>#}
+{#                <div class="box1">#}
+{#                    <figure><img src="img/page1_pic9.png" alt=""></figure>#}
+{#                    <div class="caption">#}
+{#                        <figure><img src="img/page1_pic10.png" alt=""></figure>#}
+{#                        <figure><img src="img/page1_pic11.png" alt=""></figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="box2">#}
+{#                    <div class="caption">#}
+{#                        <figure><img src="img/page1_pic12.png" alt=""></figure>#}
+{#                        <figure><img src="img/page1_pic13.png" alt=""></figure>#}
+{#                    </div>#}
+{#                    <figure><img src="img/page1_pic22.png" alt=""></figure>#}
+{#                </div>#}
+{#                <div class="box3">#}
+{#                    <figure><img src="img/page1_pic14.png" alt=""></figure>#}
+{#                </div>#}
+{#                <div class="box4">#}
+{#                    <div class="caption">#}
+{#                        <figure><img src="img/page1_pic15.png" alt=""></figure>#}
+{#                        <figure><img src="img/page1_pic16.png" alt=""></figure>#}
+{#                    </div>#}
+{#                    <figure><img src="img/page1_pic17.png" alt=""></figure>#}
+{#                </div>#}
+{#                <div class="box5">#}
+{#                    <figure><img src="img/page1_pic18.png" alt=""></figure>#}
+{#                    <div class="caption">#}
+{#                        <figure><img src="img/page1_pic19.png" alt=""></figure>#}
+{#                        <figure><img src="img/page1_pic20.png" alt=""></figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="box3">#}
+{#                    <figure><img src="img/page1_pic21.png" alt=""></figure>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+    <div class="thumb-box6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h2 style="color: white; font-weight: bold">About Us</h2>
+                    <ul class="list1">
+                        <li>
+                            <div class="badge fa fa-laptop"></div>
+                            <div class="extra-wrap">
+                                <strong>Online Presence</strong>
+                            </div>
+                                <p>This is the third and final project in this bootcamp. If this website gets decent reviews and comments i do intend to launch this website into a live environment as i believe there is a growing market for such products.  </p>                        </li>
+{#                        <li>#}
+{#                            <div class="badge fa fa-thumbs-o-up"></div>#}
+{#                            <div class="extra-wrap">#}
+{#                                <strong>Excepteur sint occaecat <br>cupidatat non</strong>#}
+{#                            </div>#}
+{#                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h2 style="color: white; font-weight: bold">Social Media</h2>
+                    <ul class="list1">
+                        <li>
+                           <div class="badge fa fa-thumbs-o-up"></div>
+                            <div class="extra-wrap">
+                                <strong>Social media Presences</strong>
+                            </div>
+                                <p>I also intend to launch multiple different social media platforms in an attempt to connect with my target audience / market. Platforms such as Facebook, and Twitter are very important in the modern era. Also a Youtube channel willv also be added, encouraging users to post videos of their layouts, or purchase reviews etc </p>                        </li>
+{#                        <li>#}
+{#                            <span>02/</span>#}
+{#                            <div class="extra-wrap">#}
+{#                                <strong>Excepteur sint occaecat <br>cupidatat non</strong>#}
+{#                            </div>#}
+{#                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+
+{% endblock %}
+</body>
+</html>

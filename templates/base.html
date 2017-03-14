@@ -1,0 +1,202 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{%  static 'img/favicon.ico' %}" type="image/x-icon">
+<link rel="shortcut icon" href="{%  static 'img/favicon.ico' %}" type="image/x-icon" />
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<meta name = "format-detection" content = "telephone=no" />
+<!--CSS-->
+<link rel="stylesheet" href="{%  static 'css/bootstrap.css' %}" >
+<link rel="stylesheet" href="{%  static 'css/style.css' %}">
+<link rel="stylesheet" href="{%  static 'css/animate.css' %}">
+<link rel="stylesheet" href="{%  static 'fonts/font-awesome.css' %}">
+{#    <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />#}
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+<!--JS-->
+
+<script src="{%  static 'js/jquery.js' %}"></script>
+<script src="{%  static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+<script src="{%  static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{%  static 'js/jquery.mobilemenu.js'%}"></script>
+<script src="{%  static 'js/jquery.equalheights.js' %}"></script>
+<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
+{% comment %}
+Links for timer
+{% endcomment %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.countdown.css' %}">
+<script type="text/javascript" src="{%  static 'js/jquery.plugin.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.countdown.js' %}"></script>
+{#<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>#}
+<!--[if (gt IE 9)|!(IE)]><!-->
+<script src="{%  static 'js/wow/wow.js' %}"></script>
+<script src="{%  static 'js/wow/device.min.js' %}"></script>
+
+
+<script>
+   $(document).ready(function () {
+     if ($('html').hasClass('desktop')) {
+       new WOW().init();
+     }
+   });
+    </script>
+
+{# <script type="text/javascript">#}
+{#$(document).ready(function() {#}
+{#    $("#size").click(function () {#}
+{#        alert("The paragraph was clicked.");#}
+{#    });#}
+{#});#}
+{##}
+{#</script>#}
+
+     <script type="text/javascript">
+$(document).ready(function() {
+    $("#size").click (function (){
+        $('.imgs').animate({height:'1000px'},{width:'1000px'});
+    });
+});
+
+</script>
+
+
+</head>
+<body>
+<!--header-->
+<header>
+   <div class="box">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-8 col-md-8">
+                   <p class="title1">Free phone: <strong>800-2345-6789</strong></p>
+{#                   <p class="title2">Hours:  8am-8pm PST M-Th;   6am-3pm PST Fri</p>#}
+               </div>
+               <div class="col-lg-4 col-md-4">
+                   {% if user.is_authenticated %}
+                   <a href="{% url 'logout' %}" class="btn-default btn1">Sign Out</a>
+                   {% else %}
+                     <a href="{% url 'register' %}" class="btn-default btn1">Register</a>
+                   <a href="{% url 'login' %}" class="btn-default btn1">Sign In</a>
+                   {% endif %}
+               </div>
+           </div>
+       </div>
+   </div>
+   
+  <div class="container">
+
+       <h1 class="navbar-brand navbar-brand_"><a href="/home/"><img src="{%  static 'marklin-img/base-logo.jpg' %}" alt=""></a></h1>
+      <a style="padding: 100px;" href="http://www.animatedimages.org/cat-trains-75.htm"><img src="http://www.animatedimages.org/data/media/75/animated-train-image-0006.gif" border="0" alt="animated-train-image-0006"/></a>
+       <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+
+               </li>
+               <li><a href="/home/">Home</a> </li>
+               <li><a href= "/products/">Sell / Buy</a></li>
+               <li><a href="/gallery/">Image gallery</a> </li>
+               <li><a href="/blog/">Blog</a></li>
+               <li><a href="/contact/">Contact Us</a></li>
+               <li><a href="/policy/">Purchasing Policy</a></li>
+
+           </ul>
+       </nav>
+   </div>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<div id="masthead">
+   <div class="container">
+       <div class="row">
+
+       </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+       <div class="col-md-12">
+           <div class="panel">
+               <div class="panel-body">
+
+
+
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+
+<footer style="background-color: red;">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-4 col-md-6 col-sm-6 maxheight4">
+               <h2><strong>Information</strong></h2>
+               <ul class="list3">
+{#                   <li><a href="About.html">About Us</a></li>#}
+                   <li style="color: white"><a href="#">My Account</a></li>
+                   <li><a href="#">Price list</a></li>
+                   <li><a href="/contact/">Contact Us</a></li>
+                   <li><a href="#">Registration</a></li>
+                   <li><a href="/blog/">Blog</a></li>
+               </ul>
+           </div>
+           <div class="col-lg-4 col-md-6 col-sm-6 maxheight4">
+               <h2><strong>Help Center</strong></h2>
+               <ul class="list3">
+                   <li><a href="#">Assistance</a></li>
+                   <li><a href="#">FAQ</a></li>
+                   <li><a href="#">Winners&apos; comments</a></li>
+                   <li><a href="#">Refill the account</a></li>
+                   <li><a href="#">Payments</a></li>
+               </ul>
+           </div>
+           <div class="col-lg-4 col-md-6 col-sm-6 maxheight4">
+               <h2><strong>Partners</strong></h2>
+               <ul class="list3">
+                   <li><a href="#">Lorem ipsum dolor</a></li>
+                   <li><a href="#">Conse ctetur adipisicing</a></li>
+                   <li><a href="#">Elit sed do eiusmod tempor</a></li>
+                   <li><a href="#">Incididunt ut labore</a></li>
+                   <li><a href="#">Et dolore magna aliqua</a></li>
+                   <li><a href="#">Ut enim ad minim</a></li>
+               </ul>
+           </div>
+           
+          
+         </div>
+       <div class="copyright">
+           <p class="privacy">Online Auction &copy; <em id="copyright-year"></em>. <a href="selling-policy.html">Privacy Policy</a></p>
+       </div>
+   </div>
+
+</footer>
+
+{#<script src="{%  static 'js/jquery.js' %}"></script>#}
+{#<script src="{%  static 'js/jquery-migrate-1.2.1.min.js' %}"></script>#}
+{#<script src="{%  static 'js/jquery.easing.1.3.js' %}"></script>#}
+{#<script src="{%  static 'js/jquery.mobilemenu.js'%}"></script>#}
+{#<script src="{%  static 'js/jquery.equalheights.js' %}"></script>#}
+{#<script src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>#}
+{#{% comment %}#}
+{#Links for timer#}
+{#{% endcomment %}#}
+{##}
+{#<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.countdown.css' %}">#}
+{#<script type="text/javascript" src="{%  static 'js/jquery.plugin.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/jquery.countdown.js' %}"></script>#}
+{#<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>#}
+{#<!--[if (gt IE 9)|!(IE)]><!-->#}
+{#<script src="{%  static 'js/wow/wow.js' %}"></script>#}
+{#<script src="{%  static 'js/wow/device.min.js' %}"></script>#}
+
+
+
+
+</body>

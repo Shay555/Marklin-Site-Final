@@ -1,0 +1,31 @@
+{#{% extends "base.html" %}#}
+{#{% block content %}#}
+{#        {% load bootstrap_tags %}#}
+{#        <h1>Add an Image upload</h1>#}
+{#         <form method="POST" enctype="multipart/form-data">#}
+{#                {% csrf_token %}#}
+{#                {{ form | as_bootstrap}}#}
+{#                <button type="submit" class="btn btn-info">Save</button>#}
+{#        </form>#}
+{#{% endblock %}#}
+
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+     {% load bootstrap_tags %}
+       <h1 style="text-align: center">Add an Image upload</h1>
+
+    <div style="text-align: center; font-size: 20px; margin: 0 auto">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+    </div>
+
+{#  <p><a href="{% url 'home' %}">Return to home</a></p>#}
+{% endblock %}

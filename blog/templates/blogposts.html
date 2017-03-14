@@ -1,0 +1,116 @@
+
+
+{#{% extends "base.html" %}#}
+{##}
+{#{% block content %}#}
+{##}
+{#      <h1 style="text-align: center; color: white; font-weight: bold;">Use our blog to interact with other users <br> Search for items and <br> Upload images of items / layouts </h1>#}
+{##}
+{##}
+{#    {% for post in posts %}#}
+{##}
+{#        <div class="row">#}
+{#            <hr>#}
+{#            <div class="col-md-2 col-sm-3 text-center">#}
+{#                <a class="story-img" href="#">#}
+{#                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">#}
+{#                </a>#}
+{#            </div>#}
+{#            <div class="col-md-10 col-sm-9">#}
+{#                <h3>{{ post.title }}</h3>#}
+{#                <div class="row">#}
+{#                    <div class="col-xs-9">#}
+{#                       <p>{{ post.content|truncatewords:30 }}</p>#}
+{#                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>#}
+{#                        <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>#}
+{#                        {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endfor %}#}
+{#{% endblock %}#}
+
+
+
+
+{% extends "base.html" %}
+
+{% block content %}
+
+      <h1 style="text-align: center; color: white; font-weight: bold;">Use our blog to interact with other users <br> Search for items and <br> Upload images of items / layouts </h1>
+
+
+    {% for post in posts.object_list %}
+
+        <div class="row">
+            <hr>
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="#">
+                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+                </a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+                <h3>{{ post.title }}</h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                       <p>{{ post.content|truncatewords:30 }}</p>
+                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>
+                        <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+                        {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}
+
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{#    <div class="pag-position">#}
+{##}
+{#    <div class="pagination">#}
+{#        <ul>#}
+{#        {% if posts.has_previous %}#}
+{#            <li><a href="?page={{ posts.previous_page_number }}">Previous</a></li>#}
+{#            {% endif %}#}
+{#        {% for pg in posts.paginator.page_range %}#}
+{#            {% if posts.number == pg %}#}
+{#                <li class="active"><a href="?page={{ pg }}">{{ pg }}</a> </li>#}
+{#        {% else %}#}
+{#                <li><a href="?page={{ pg }}">{{ pg }}</a> </li>#}
+{#        {% endif %}#}
+{#        {% endfor %}#}
+{#        {% if posts.has_next %}#}
+{#        <li><a href="?page={{ posts.next_page_number }}">Next</a> </li>#}
+{#        {% endif %}#}
+{#        </ul>#}
+{#    </div>#}
+{##}
+{#    </div>#}
+
+
+     <br><br>
+
+    <div class="row">
+    <div class="col-md-12" style="background-color: blue;">
+
+<ul class="product-nav" style="text-align: center;">
+
+    {% if posts.has_next %}
+<li style="list-style: none; display: inline-block">
+        <a style="color: white !important;font-size: 25px; display: inline-block !important; padding: 5px;" href="?page={{ posts.next_page_number }}">Next</a></li>
+    {% endif %}
+
+    {% if posts.has_previous %}
+     <li style="list-style: none; display: inline-block">
+       <a style="color: white !important;font-size: 25px; display: inline-block !important; padding: 5px;" href="?page={{ posts.previous_page_number }}">Previous</a></li>
+    {% endif %}
+
+ </ul>
+
+</div>
+    </div>
+
+<br><br>
+
+{% endblock %}
